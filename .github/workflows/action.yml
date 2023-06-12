@@ -32,7 +32,7 @@ jobs:
     - name: Update dependency graph/Submit Dependency Snapshot
       uses: advanced-security/maven-dependency-submission-action@v3
 
-  build-publish-docker-image-dockerHub:
+  login-dockerHub:
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -46,3 +46,8 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+    - name: Build and push docker image o dockerHub
+      uses: docker/build-push-action@v4
+      with:
+        push: true
+        tags: riturajdocker/firstazuresimpleapi:latest
