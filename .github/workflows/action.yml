@@ -36,6 +36,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+    -  name: Checkout
+       uses: actions/checkout@v3
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v2
     - name: Set up Docker Buildx
@@ -46,8 +48,9 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    - name: Build and push docker image o dockerHub
+    - name: Build and push docker image to dockerHub
       uses: docker/build-push-action@v4
       with:
+        context: .
         push: true
         tags: riturajdocker/firstazuresimpleapi:latest
