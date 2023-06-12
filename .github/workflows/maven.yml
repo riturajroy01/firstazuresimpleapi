@@ -32,7 +32,7 @@ jobs:
     - name: Update dependency graph/Submit Dependency Snapshot
       uses: advanced-security/maven-dependency-submission-action@v3
 
-  publish:
+  build-publish-docker-image-dockerHub:
     needs: build
     runs-on: ubuntu-latest
     steps:
