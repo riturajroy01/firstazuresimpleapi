@@ -29,8 +29,8 @@ jobs:
       run: mvn clean install
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
-    - name: Update dependency graph/Submit Dependency Snapshot
-      uses: advanced-security/maven-dependency-submission-action@v3
+#    - name: Update dependency graph/Submit Dependency Snapshot
+#      uses: advanced-security/maven-dependency-submission-action@v3
 
   login-dockerHub:
     needs: build
