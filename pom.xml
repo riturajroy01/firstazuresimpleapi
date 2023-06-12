@@ -36,7 +36,6 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-        <finalName>first-azure-simple-api</finalName>
     </build>
 
 </project>

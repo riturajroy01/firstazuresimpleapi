@@ -1,4 +1,4 @@
 FROM eclipse-temurin:11
 EXPOSE 8080
-ADD target/first-azure-simple-api.jar first-azure-simple-api.jar
-ENTRYPOINT ["java","-jar","/first-azure-simple-api.jar"]
+ADD target/firstazuresimpleapi-0.0.1-SNAPSHOT.jar firstazuresimpleapi.jar
+ENTRYPOINT ["java","-jar","/firstazuresimpleapi.jar"]

@@ -41,7 +41,7 @@ jobs:
 
     - name: docker build
       run: |
-       docker build -t first-azure-simple-api:1.0.0 .
+       docker build -t firstazuresimpleapi:1.0.0 .
     - name: docker push
       run: |
-        docker push riturajdocker/first-azure-simple-api:1.0.0    
+        docker push riturajdocker/firstazuresimpleapi:1.0.0    
